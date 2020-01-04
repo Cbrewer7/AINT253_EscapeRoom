@@ -11,17 +11,8 @@ public class ObjectPickup : MonoBehaviour
 
     void OnMouseDown()
     {
-        if(GetComponent<BoxCollider>())
-        {
-            GetComponent<BoxCollider>().enabled = false;
-        }
-
-        if (GetComponent<MeshCollider>())
-        {
-            GetComponent<MeshCollider>().enabled = false;
-        }
-
         GetComponent<Rigidbody>().useGravity = false;
+        GetComponent<Rigidbody>().isKinematic = true;
 
         //Move position of object infront to the destination object
         this.transform.position = destination.position;
@@ -34,15 +25,6 @@ public class ObjectPickup : MonoBehaviour
     {
         this.transform.parent = null;
         GetComponent<Rigidbody>().useGravity = true;
-
-        if (GetComponent<BoxCollider>())
-        {
-            GetComponent<BoxCollider>().enabled = true;
-        }
-
-        if (GetComponent<MeshCollider>())
-        {
-            GetComponent<MeshCollider>().enabled = true;
-        }
+        GetComponent<Rigidbody>().isKinematic = false;
     }
 }
