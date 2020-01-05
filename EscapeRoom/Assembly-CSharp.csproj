@@ -67,9 +67,16 @@
     <Compile Include="Assets\Scripts\CameraView.cs" />
     <Compile Include="Assets\Scripts\EDetection.cs" />
     <Compile Include="Assets\Scripts\KeyAnimation.cs" />
+    <Compile Include="Assets\Scripts\LeverPull.cs" />
+    <Compile Include="Assets\Scripts\LeverPull1.cs" />
+    <Compile Include="Assets\Scripts\LeverPull2.cs" />
+    <Compile Include="Assets\Scripts\LeverPull3.cs" />
+    <Compile Include="Assets\Scripts\Lightswitch.cs" />
+    <Compile Include="Assets\Scripts\MenuManager.cs" />
     <Compile Include="Assets\Scripts\ObjectPickup.cs" />
     <Compile Include="Assets\Scripts\PlayerChest.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\RayDetec.cs" />
     <Compile Include="Assets\Scripts\RDetection.cs" />
     <Compile Include="Assets\Scripts\SDetection.cs" />
     <Compile Include="Assets\Scripts\SetWall.cs" />
