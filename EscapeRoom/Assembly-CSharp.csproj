@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AllGems.cs" />
     <Compile Include="Assets\Scripts\CameraView.cs" />
     <Compile Include="Assets\Scripts\EDetection.cs" />
     <Compile Include="Assets\Scripts\KeyAnimation.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\RDetection.cs" />
     <Compile Include="Assets\Scripts\SDetection.cs" />
+    <Compile Include="Assets\Scripts\SetWall.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Gaming PC/Documents/GitHub/AINT253_EscapeRoom/EscapeRoom/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
