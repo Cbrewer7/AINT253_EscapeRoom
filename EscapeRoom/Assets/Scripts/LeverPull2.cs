@@ -8,10 +8,13 @@ public class LeverPull2 : MonoBehaviour
 
     public Light lt;
 
+    public AudioClip audioClip;
+
+    public AudioSource audioSource;
     void Start()
     {
         lt.color = Color.black;
-
+        audioSource.clip = audioClip;
     }
 
     private void OnTriggerStay(Collider other)
@@ -21,6 +24,7 @@ public class LeverPull2 : MonoBehaviour
             Debug.Log("AHHHHHH");
             on2 = true;
             lt.color = Color.red;
+            audioSource.Play();
         }
         else if (other.tag == "Player" && Input.GetKeyDown(KeyCode.F) && on2)
         {

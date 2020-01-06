@@ -7,6 +7,18 @@ public class LeverPull : MonoBehaviour
     //public GameObject light;
     public bool on = false;
 
+    public AudioClip audioClip;
+
+    public AudioSource audioSource;
+
+    public AudioClip doorClip;
+
+    public AudioSource doorSource;
+
+    public AudioClip voiceClip;
+
+    public AudioSource voiceSource;
+
     public Light lt;
     //public Animation anim;
     //public Transform destination;
@@ -19,6 +31,12 @@ public class LeverPull : MonoBehaviour
     {
         lt.color = Color.black;
         //colNum = 1;
+
+        audioSource.clip = audioClip;
+
+        doorSource.clip = doorClip;
+
+        voiceSource.clip = voiceClip;
     }
 
     private void OnTriggerStay(Collider other)
@@ -30,6 +48,10 @@ public class LeverPull : MonoBehaviour
             on = true;
             lt.color = Color.red;
             myAnimControl.SetBool("DoorOpen", true);
+
+            audioSource.Play();
+            doorSource.Play();
+            voiceSource.Play();
         }
         else if (other.tag == "Player" && Input.GetKeyDown(KeyCode.F) && on)
         {

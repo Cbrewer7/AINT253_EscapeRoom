@@ -9,26 +9,43 @@ public class AllGems : MonoBehaviour
     public static int rTempGem;
     private static int allGems;
 
-    void Update()
+    public AudioClip audioClip;
+
+    public AudioSource audioSource;
+
+    public GameObject wall;
+
+    private bool allTheGems = false;
+
+    private void Start()
     {
-        SortGems();
+        audioSource.clip = audioClip;
+
+        wall.GetComponent<MeshRenderer>();
     }
 
-    void SortGems()
+    void Update()
     {
         sTempGem = SDetection.numOfGems;
         eTempGem = EDetection.numOfGems;
         rTempGem = RDetection.numOfGems;
 
         allGems = sTempGem + eTempGem + rTempGem;
-
         if (allGems == 3)
         {
+            allTheGems = true;
+        }
+
+
+        if (allTheGems == true)
+        {
             Debug.Log("we got them");
-            
+
+            audioSource.Play();
+
             //Open Hatch
-            GameObject.Find("Wall_Segment").SetActive(false);
-            
+            wall.GetComponent<MeshRenderer>().enabled = false;
+
         }
     }
 }
