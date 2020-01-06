@@ -1,4 +1,5 @@
 Name - Charles Brewer
 Student ID - 10616005
 
-Git Repo - 
+Git Repo - https://github.com/Cbrewer7/AINT253_EscapeRoom
+Trello - https://trello.com/b/B0hhSXyT/escape-room-aint253
